@@ -3,10 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OperacionJueguete</title>
+    <title>Operation: Toy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #12122b;
+            color: #ffffff;
+            font-family: 'Fredoka', sans-serif;
+        }
+        .navbar {
+            background-color: #ff4757;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1e90ff 0%, #ff4757 100%);
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 8px solid #ffa502;
+        }
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-shadow: 4px 4px 0px #2f3542;
+            letter-spacing: 2px;
+        }
+        .btn-play {
+            background-color: #2ed573;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: 4px solid #ffffff;
+            border-radius: 12px;
+            padding: 15px 40px;
+            transition: transform 0.2s;
+            box-shadow: 0px 8px 0px #218c53;
+        }
+        .btn-play:hover {
+            transform: translateY(4px);
+            box-shadow: 0px 4px 0px #218c53;
+            color: #ffffff;
+        }
+        .btn-join {
+            background-color: #ffa502;
+            box-shadow: 0px 8px 0px #c27d00;
+        }
+        .btn-join:hover {
+            box-shadow: 0px 4px 0px #c27d00;
+            color: #ffffff;
+        }
+        .section-title {
+            color: #ffa502;
+            font-weight: 700;
+            text-align: center;
+            margin: 50px 0 30px;
+            text-shadow: 2px 2px 0px #000;
+        }
+        .card {
+            background-color: #2f3542;
+            border: 4px solid #57606f;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #ffa502;
+        }
+        .card-title {
+            font-weight: 700;
+        }
+        .team-good {
+            border-color: #1e90ff;
+        }
+        .team-bad {
+            border-color: #ff4757;
+        }
+        .footer {
+            background-color: #000000;
+            padding: 30px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .powerup-badge {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 15px;
+            margin: 5px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .badge-speed {
+            background-color: #ffa502;
+            color: #000;
+        }
+        .badge-shield {
+            background-color: #ff6b81;
+            color: #fff;
+        }
+    </style>
 </head>
-<p> Hola esta es una prueba! :3</p>
 <body>
-    
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">🧩 Operation: Toy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#reglas">Reglas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bandos">Bandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#objetos">Arsenal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">OPERATION: TOY</h1>
+            <p class="lead mb-5 fs-3 fw-bold">¡La batalla definitiva en el cuarto de juegos!</p>
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <a href="#" class="btn btn-play text-decoration-none">Host Game</a>
+                <a href="#" class="btn btn-play btn-join text-decoration-none">Join Game</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title" id="reglas">¿De qué trata?</h2>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 h-100">
+                    <h3 class="card-title text-info">Fase 1: Recolección</h3>
+                    <p class="card-text fs-5">Busca por todo el cuarto de juegos y guarda la mayor cantidad de juguetes en la caja especial. ¡Usa tus armas para retrasar al equipo rival!</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 h-100">
+                    <h3 class="card-title text-warning">Fase 2: Invasión</h3>
+                    <p class="card-text fs-5">Sobrevive los últimos 2 minutos. Defiende tu caja de juguetes o invade la base enemiga para robar todo lo que puedas antes de que el tiempo termine.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="bandos">Elige tu Bando</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card team-good p-4 text-center h-100">
+                    <h2 class="text-primary fw-bold">Niños Buenos 🌟</h2>
+                    <p class="fs-5 mt-3">Su hora de juego ha terminado. Su único objetivo es recoger los juguetes y poner orden en la habitación. Ganarán si logran asegurar su botín.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card team-bad p-4 text-center h-100">
+                    <h2 class="text-danger fw-bold">Niños Malos 💔</h2>
+                    <p class="fs-5 mt-3">Motivados por el deseo egoísta de seguir jugando. Harán lo que sea para robar, esconder y evitar que los juguetes sean guardados en la caja.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="objetos">Arsenal y Power-Ups</h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4">
+                <div class="card p-3 h-100 justify-content-center">
+                    <h4 class="fw-bold text-info">🔫 Pistola de Agua</h4>
+                    <p class="small mb-0">Ralentiza al enemigo por 2.5 segundos.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="card p-3 h-100 justify-content-center">
+                    <h4 class="fw-bold text-success">🎵 Xilófono</h4>
+                    <p class="small mb-0">Pone a dormir al rival por 2.5 segundos.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="card p-3 h-100 justify-content-center">
+                    <span class="powerup-badge badge-speed mb-2">🧃 Jugo de Naranja</span>
+                    <p class="small mb-0">Otorga velocidad extra por 4s.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="card p-3 h-100 justify-content-center">
+                    <span class="powerup-badge badge-shield mb-2">🍰 Rebanada de Pastel</span>
+                    <p class="small mb-0">Inmunidad a ralentizaciones por 4s.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-2 fs-5 fw-bold text-white">Desarrollado por el Grupo 052</p>
+            <p class="small text-secondary mb-0">Ximena Rodriguez | Isacc Canizales | Kevin Bolaños | Jonathan García | Arantza Loza</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
